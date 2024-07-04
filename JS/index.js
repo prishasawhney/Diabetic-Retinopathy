@@ -38,7 +38,7 @@ const btns = document.querySelectorAll(".nav-btn");
             start = sliderNav(start);
         };
 
-        let interval = setInterval(sliderAutomatic, 5000);
+        let interval = setInterval(sliderAutomatic, 8000);
 
         // clearInterval(interval);
 

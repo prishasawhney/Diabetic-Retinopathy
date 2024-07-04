@@ -19,12 +19,12 @@ db_connection_string = f"mongodb+srv://prishasawhney:{db_pass}@mycluster.bpqhvmj
 client=MongoClient(db_connection_string)
 templates = Jinja2Templates(directory="HTML")
 
-model = tf.keras.models.load_model(r'C:\Users\omen\Documents\Website Template\Models\Classify.h5')
+model = tf.keras.models.load_model(r'Models\Classify.h5')
 
 app = FastAPI()
-app.mount("/css", StaticFiles(directory=r"C:\Users\omen\Documents\Website Template\CSS"), name="css")
-app.mount("/assets", StaticFiles(directory=r"C:\Users\omen\Documents\Website Template\Assets"), name="assets")
-app.mount("/js", StaticFiles(directory=r"C:\Users\omen\Documents\Website Template\JS"), name="js")
+app.mount("/css", StaticFiles(directory=r"CSS"), name="css")
+app.mount("/assets", StaticFiles(directory=r"Assets"), name="assets")
+app.mount("/js", StaticFiles(directory=r"JS"), name="js")
 
 # Adding cors urls
 # origins = [
