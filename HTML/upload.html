@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="http://127.0.0.1:5000/css/upload.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>BRAND NAME</title>
+</head>
+
+<body>
+  <div class="hero">
+    <a href="/">
+      <button id="back-btn">
+        <i class='bx bx-chevron-left' style="color: #fff; font-size: 30px;"></i>
+      </button>
+    </a>
+    <form action="http://127.0.0.1:5000/results" method="post" id="image-upload-form" enctype="multipart/form-data">
+      <label for="input-file" id="drop-area">
+        <input type="file" name="file" id="input-file" accept="image/*" hidden />
+        <div id="img-view">
+          <img src="http://127.0.0.1:5000/assets/upload-icon.png" />
+          <p>Drag and drop or click here<br />to upload image</p>
+          <span>Upload any images from desktop.</span>
+        </div>
+      </label>
+      <button type="submit" id="submit-btn">submit</button>
+    </form>
+    <div class="response-placeholder">
+      <span>Stage of Diabetic Retinopathy : </span> <span id="response"></span>
+    </div>
+    <div class="meter">
+      <div class="meter-bar" id="meter-bar"></div>
+    </div>
+    <div id="error"></div>
+
+  </div>
+
+  <script src="http://127.0.0.1:5000/js/upload.js"></script>
+</body>
+
+</html>

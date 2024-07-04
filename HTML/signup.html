@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="http://127.0.0.1:5000/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- DEFAULT -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    
+</head>
+
+<body>
+    <section class="side">
+        <img src="http://127.0.0.1:5000/assets/img.svg" alt="">
+    </section>
+
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Welcome</p>
+            <div class="separator"></div>
+            <p class="welcome-message">Please register to proceed and have access to all our services</p>
+
+            <form method="POST" action="http://127.0.0.1:5000/signup" class="login-form">
+                <div class="form-control">
+                    <input type="email" name="email_id" id="" placeholder="Email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="text" name="uname" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="password" name="pswd" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="password" name="pswd2" placeholder="Confirm password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+                <div class="form-control">
+                    <select name="question" id="question" class="questions" required>
+                        <option value="" selected disabled>Choose a security question</option>
+                        <option value="question1">What city were you born in?</option>
+                        <option value="question6">What is your nickname?</option>
+                        <option value="question2">What is your favorite food?</option>
+                        <option value="question3">What is your favorite book?</option>
+                        <option value="question4">What is your favorite movie?</option>
+                        <option value="question5">What is your favorite song?</option>
+                        <option value="question6">Who is your favourite actor?</option>
+                    </select>
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="text" name="answer" placeholder="Answer" required>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+
+                <div class="old-user-portal">
+                    <a href="/login">Existing User? Login</a>
+                </div>
+
+                <button type="submit">Sign Up</button>
+                <div class="error-message">
+                    <h4 style="color: red;">{{error}}</h4>
+                </div>
+            </form>
+
+        </div>
+    </section>
+
+    <script>
+        var data = JSON.parse('{{data}}');
+         console.log(data);
+         for (let i=0;i<data.length;i++){
+            console.log(data[i]);
+         }
+     </script>
+
+</body>
+
+</html>

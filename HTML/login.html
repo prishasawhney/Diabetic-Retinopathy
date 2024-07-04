@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="http://127.0.0.1:5000/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- DEFAULT -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <section class="side">
+        <img src="http://127.0.0.1:5000/assets/img.svg" alt="">
+    </section>
+
+    <section class="main">
+        <div class="login-container">
+            <p class="title">Welcome Back</p>
+            <div class="separator"></div>
+            <p class="welcome-message">Please, provide login credentials to proceed and have access to all our services
+            </p>
+
+            <form action="http://127.0.0.1:5000/login" class="login-form" method="POST">
+                <div class="form-control">
+                    <input type="text" name="uname" id="" placeholder="Username" required>
+                    <i class="fas fa-user"></i>
+                </div>
+
+                <div class="form-control">
+                    <input type="password" name="pswd" id="" placeholder="Password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+
+
+                <div class="new-user-portal">
+                    <a href="/signup">New User? Sign Up</a>
+                </div>
+
+                <button type="submit">Login</button>
+                <div class="error-message">
+                    <h4 style="color: red;">{{error}}</h4>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
